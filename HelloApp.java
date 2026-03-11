@@ -1,13 +1,16 @@
-/**
- * HelloApp.java - A simple Java application that displays "Hello, World!" to the console.
- *
- * @author Developer Name
- * @version 1.0
- */
-
 public class HelloApp {
 
     public static void main(String[] args) {
-        System.out.println("Hello World");
+
+        if (args.length > 0) {
+            // Get the name from command-line argument
+            String name = args[0];
+            System.out.println("Hello, " + name + "!");
+        } 
+        else {
+            // Default message if no argument is given
+            System.out.println("Hello, World!");
+        }
+
     }
 }
