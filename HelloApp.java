@@ -8,20 +8,17 @@ public class HelloApp {
             return;
         }
 
-        // Build the names string
+        // Build names with comma
         StringBuilder nameBuilder = new StringBuilder();
 
-        boolean first = true;
-
         for (String name : args) {
-            if (!first) {
-                nameBuilder.append(", ");
-            }
-            nameBuilder.append(name);
-            first = false;
+            nameBuilder.append(name).append(", ");
         }
 
+        // Remove the last ", "
+        String names = nameBuilder.substring(0, nameBuilder.length() - 2);
+
         // Print greeting
-        System.out.println("Hello, " + nameBuilder + "!");
+        System.out.println("Hello, " + names + "!");
     }
 }
